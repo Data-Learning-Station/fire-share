@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #5a5a5a;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main.top {
+    justify-content: start;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h6 {
+    font-size: .75rem;
+}
+
+h5 {
+    font-size: .9rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.logo {
+    color: #4aaaff;
+}
+
+a {
+    background-color: #4aabff26;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #4aabfffe;
+}
+
+select, input, textarea {
+    border: 1px solid #ebebeb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input:focus, textarea:focus {
+    border-color: #4aaaff;
+}
+
+button, a.btn {
+    text-align: center;
+    cursor: pointer;
+    background-color: #4aaaff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px 20px;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    color: white;
+}
+
+button:hover, a.btn:hover {
+    background-color: #429ae7;
+}
+
+button:focus, a.btn:focus  {
+    border-color: #4aaaff;
+}
+
+button.outline, a.btn.outline {
+    background-color: white;
+    color: #429ae7;
+    border-color: #4aaaff;
+}
+
+button.outline:hover, a.btn.outline:hover {
+    background-color: #429ae725;
+    color: #429ae7;
+    border-color: #4aaaff;
+}
+
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border: 1px solid #dbdbdb3d;
+    border-collapse: collapse;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #eaeaea47;
+}
+
+.login {
+    width: 400px;
+    border: 1px solid #f1f1f1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login.wide {
+    width: 70%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.row.end {
+    justify-content: end;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.width-md {
+    width: 400px;
+}
+
+.row.fluid > * {
+    flex-grow: 1;
+}
+
+.row.between {
+    justify-content: space-between;
+}
+
+.error {
+    background-color: #c5515d23;
+    color: #c5515d;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dashboard {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+aside {
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .title {
+    padding: 20px 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-bottom: 1px solid #f1f1f178;
+    display: flex;
+    gap: 5px;
+    padding: 15px 20px;
+}
+
+.item a {
+    width: 100%;
+    background-color: transparent;
+    color: #5a5a5a;
+}
+
+.item:hover {
+    background-color: #f6f6f67c;
+}
+
+.item img {
+    width: 16px;
+}
+
+.item.active {
+    background-color: #f6f6f6b3;
+}
+
+.item.to-bottom {
+    margin-top: auto;
+}
+
+.item.accent {
+    color: #429ae7;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+nav {
+    grid-row: 1;
+    border: 1px solid #f1f1f1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #eaeaea52;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+.avatar img {
+    width: 16px;
+}
+
+.content {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-y: auto;
+}
+
+.card {
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card.min {
+    height: fit-content;
+}
+
+.project-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb6d;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #eaeaea;
+}
+
+.no-content {
+    padding: 30px;
+    color: #5a5a5a72;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.tab-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.tab {
+    color: #5a5a5a;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+.tab.active {
+    background-color: #eaeaea;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tokens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.token {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 1px solid #f1f1f1;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.token span {
+    display: flex;
+    gap: 10px;
+}
+
+.token .name {
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 1.0rem;
+}
+
+.token a {
+    margin: 5px;
+}
+
+.dimmer {
+    display: none!important;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #5a5a5a28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimmer.show {
+    display: flex!important;
+}
+
+.tab-heading {
+    margin: 15px 0;
+}

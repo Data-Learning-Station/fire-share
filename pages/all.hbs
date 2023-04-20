@@ -1,0 +1,14 @@
+<main class="top" style="gap: 10px; padding: 20px;">
+
+    <h2> All Files </h2>
+
+    {{#each files}}
+        <div class="login wide">
+            <h4> {{filename}} </h4>
+            <p> {{desc}} </p>
+            <hr>
+            <span> Share this file with follow link </span>
+            <input type="text" disabled value="http://{{../host}}:{{../port}}/file/{{link}}">
+        </div>
+    {{/each}}
+</main>
