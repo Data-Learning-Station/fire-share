@@ -1,6 +1,7 @@
 {
     "name": "node-ts-project",
     "version": "1.0.0",
+    "type": "module",
     "dependencies": {
         "@prisma/client": "^4.13.0",
         "@types/cors": "2.8.13",

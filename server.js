@@ -66,7 +66,7 @@ server.post('/upload', upload.single('file'), async (request, response) => {
 server.get('/file/:link', async (request, response) => {
     const link = request.params.link
 
-    db.get('SELECT * FROM file WHERE link = ?', [link], (error, file: any) => {
+    db.get('SELECT * FROM file WHERE link = ?', [link], (error, file) => {
         if (!file) {
             return response.send('File not found')
         }
@@ -86,7 +86,7 @@ server.get('/download/:filename', async (request, response) => {
 
 server.get('/all', async (request, response) => {
 
-    db.all('SELECT * FROM file', (error, files: any[]) => {
+    db.all('SELECT * FROM file', (error, files) => {
         response.render('all', {
             files,
             host: 'localhost',
